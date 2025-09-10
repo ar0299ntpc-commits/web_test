@@ -158,41 +158,119 @@ body{
 .tab__wrapper{
     display: none;
     position: absolute;
-    width:1050px;       /* 先吃死寬度 */
-    padding: 10px;
-    border-radius: 30px;
-    max-height: 90vh;
+    width: 1060px; /* Main content area width */
+    max-height: 85vh;
     background-color: white;
     z-index: 2;
-    
-    /* 置中 */
     top: 50%;
     left: 50%;
-    transform: translate( -50% , -50% );   
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    margin-left: 100px; /* Make space for the tabs */
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+
 .tab__closeIcon{
     width: 30px;
     height: 30px;
     cursor: pointer;
     z-index: 10;
-
     position: absolute;
-    right: 50px;
+    right: 20px;
     top: 20px;
 }
 .tab__closeIcon:hover{ transform: scale(1.3); }
-.tab__content-container{
-    height: calc( 90vh - 20px );    /* 扣掉padding的距離 */
-    overflow-y: scroll;
-}
 
-/* -- LABEL -- */
-.tab__label-container{
+.tab__label-container {
     display: flex;
-    position: absolute;
     height: 100%;
 }
-.tab__label{
-    height: 12.5%;
-    
+
+/* Container for the left-side tabs */
+.tab__nav {
+    position: absolute;
+    top: 0;
+    left: -120px; /* Pull the nav outside the wrapper */
+    width: 100px; /* Width of the tabs */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: -40px; /* Align with content */
+    z-index: 1; /* Behind active tab but above overlay */
+}
+
+/* The main content area on the right */
+.tab__main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/* Container for the top buttons */
+.tab__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    min-height: 50px; /* Ensure space even if empty */
+}
+
+/* Container for the Tableau content */
+.tab__content-container{
+    flex-grow: 1;
+    height: calc(85vh - 100px); /* Adjust height based on wrapper padding and buttons */
+    overflow-y: auto;
+    padding-top: 15px;
+}
+
+/* -- Individual Buttons & Tabs Styling -- */
+
+/* Styling for the left-side folder tabs */
+.tab-label {
+    background-color: #ffffff; /* Slightly off-white for contrast */
+    border: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 15px 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px 0 0 10px; /* Rounded corners on the left */
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.tab-label:hover {
+    background-color: #FFF2CC; /* Night sky blue */
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+.tab-label.active {
+    background-color: white; /* Match the content area */
+    font-weight: bold;
+    border-right-color: white; /* Seamless connection */
+    z-index: 3; /* Bring active tab to the front */
+}
+
+/* Styling for the top buttons */
+.tab-button-top {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tab-button-top:hover {
+    background-color: #d7d7d7ef;
+}
+
+.tab-button-top.active {
+    background-color: #6c9de6;
+    color: white;
+    border-color: #ffffff;
 }
