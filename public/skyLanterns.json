@@ -1,0 +1,40 @@
+{
+    "skyLanterns": [
+        {
+            "id": 1,
+            "category": "社會參與",
+            "lanternImg": "./public/image/天燈/天燈_社會參與.svg",
+            "textImg": "./public/image/文字/文字1_同心協力.svg"
+        },
+        {
+            "id": 2,
+            "category": "就業、經濟與福利",
+            "lanternImg": "./public/image/天燈/天燈_就業.svg",
+            "textImg": "./public/image/文字/文字2_工作順利.svg"
+        },
+        {
+            "id": 3,
+            "category": "人口、婚姻與家庭",
+            "lanternImg": "./public/image/天燈/天燈_人口.svg",
+            "textImg": "./public/image/文字/文字3_家庭和樂.svg"
+        },
+        {
+            "id": 4,
+            "category": "教育、文化與媒體",
+            "lanternImg": "./public/image/天燈/天燈_教育.svg",
+            "textImg": "./public/image/文字/文字4_學有所成.svg"
+        },
+        {
+            "id": 5,
+            "category": "人身安全與環境",
+            "lanternImg": "./public/image/天燈/天燈_人身安全.svg",
+            "textImg": "./public/image/文字/文字5_闔家平安.svg"
+        },
+        {
+            "id": 6,
+            "category": "健康、醫療與照顧",
+            "lanternImg": "./public/image/天燈/天燈_健康.svg",
+            "textImg": "./public/image/文字/文字6_永保安康.svg"
+        }
+    ]
+}

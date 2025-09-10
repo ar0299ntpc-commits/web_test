@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>新北市性別統計視覺化專區</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="overlay" class="overlay"></div>
+        <!-- 天燈組 -->
+        <main class="skyLantern__wrapper">
+
+            <!-- 平權共生 -->
+            <div class="skyLantern__equality" id="skyLantern__equality">
+                <img
+                    class="skyLantern__equality-img"
+                    src="./public/image/天燈/天燈_綜合指數.svg"
+                    alt="">
+                <img
+                    class="skyLantern__text skyLantern__equality-text"
+                    src="./public/image/文字/文字0_平權共生.svg"
+                    alt="">
+            </div>
+            
+            <!-- 同心協力(社會參與) -->
+            <div class="skyLantern__social" id="skyLantern__social">
+                <img
+                    class="skyLantern__social-img"
+                    src="./public/image/天燈/天燈_社會參與.svg"
+                    alt="">
+                <img
+                    class="skyLantern__text skyLantern__social-text"
+                    src="./public/image/文字/文字1_同心協力.svg"
+                    alt="">
+            </div>
+
+            <!-- 工作順利(就業、經濟與福利 -->
+            <div class="skyLantern__work" id="skyLantern__work">
+                <img 
+                    class="skyLantern__work-img"
+                    src="./public/image/天燈/天燈_就業.svg"
+                    alt="">
+                <img
+                    class="skyLantern__text skyLantern__work-text"
+                    src="./public/image/文字/文字2_工作順利.svg"
+                    alt="">
+            </div>
+
+            <!-- 家庭和樂(人口、婚姻與家庭) -->
+            <div class="skyLantern__family" id="skyLantern__family">
+                <img
+                    class="skyLantern__family-img"
+                    src="./public/image/天燈/天燈_人口.svg"
+                    alt="">
+                <img
+                    class="skyLantern__text skyLantern__family-text"
+                    src="./public/image/文字/文字3_家庭和樂.svg"
+                    alt="">
+            </div>
+
+            <!-- 學有所成(教育、文化與媒體) -->
+            <div class="skyLantern__education" id="skyLantern__education">
+                <img
+                    class="skyLantern__education-img"
+                    src="./public/image/天燈/天燈_教育.svg"
+                    alt="">
+                <img
+                    class="skyLantern__text skyLantern__education-text"
+                    src="./public/image/文字/文字4_學有所成.svg"
+                    alt="">
+            </div>
+
+            <!-- 闔家平安(人身安全與環境) -->
+            <div class="skyLantern__safe" id="skyLantern__safe">
+                <img
+                    class="skyLantern__safe-img"
+                    src="./public/image/天燈/天燈_人身安全.svg"
+                    alt="">
+                <img
+                    class="skyLantern__text skyLantern__safe-text"
+                    src="./public/image/文字/文字5_闔家平安.svg"
+                    alt="">
+            </div>
+
+            <!-- 永保安康(健康、醫療與照顧) -->
+            <div class="skyLantern__health" id="skyLantern__health">
+                <img
+                    class="skyLantern__health-img"
+                    src="./public/image/天燈/天燈_健康.svg"
+                    alt="">
+                <img
+                    class="skyLantern__text skyLantern__health-text"
+                    src="./public/image/文字/文字6_永保安康.svg"
+                    alt="">
+            </div> 
+        </main>        
+    </div>
+
+    <!-- Tab -->
+    <div id="tab" class="tab__wrapper">
+        <img
+            id="closeIcon"
+            class="tab__closeIcon"
+            src="./public/image/icon/close.png"
+            alt="">
+        <div class="tab__label-continer">
+            <!-- 左側：標籤列表 -->
+        <aside id="tabLabels" class="tab__nav" role="tablist" aria-label="資料標籤"></aside>
+
+        <!-- 右側：內容 -->
+        <main id="tabMain" class="tab__main">
+            <!-- 僅「就業、經濟與福利」會顯示 -->
+            <div id="tabButtons" class="tab__buttons"></div>
+
+            <!-- 主要內容（Tableau 片段） -->
+            <div id="tab__content" class="tab__content-container">
+            </div>
+        </main>
+        </div>
+    </div>
+
+    <script src="./public/js/main.js" defer></script>
+    <script src="./public/js/tab.js" defer></script>
+</body>
+</html>
